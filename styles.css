@@ -1,0 +1,224 @@
+/* ESTILO GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px 15px 80px;
+    color: #222;
+}
+
+h1, h2 { color: #174b7a; }
+h2 { margin-top: 40px; }
+
+/* 1. MODELO DE CAJA */
+.caja {
+    box-sizing: content-box;
+    width: 200px;
+    padding: 20px;
+    border: 2px solid blue;
+    margin: 20px;
+    background-color: lightblue;
+}
+
+/* 2. BLOQUE Y EN LINEA */
+.bloque {
+    display: block;
+    background-color: lightblue;
+    margin-bottom: 5px;
+}
+.en-linea {
+    display: inline;
+    background-color: lightyellow;
+}
+
+/* 3. DISPLAY */
+.convertido {
+    display: block;
+    background-color: lightgreen;
+}
+.en-linea-bloque {
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    background-color: lightblue;
+}
+.no-mostrar { display: none; }
+
+/* 4. POSITION */
+.estatico {
+    position: static;
+    background-color: lightgray;
+}
+.relativo {
+    position: relative;
+    left: 20px;
+    width: 80%;
+    background-color: lightyellow;
+}
+.contenedor-posicion {
+    position: relative;
+    height: 160px;
+    border: 1px solid gray;
+}
+.absoluto {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 180px;
+    background-color: lightgreen;
+}
+.fijo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #174b7a;
+    color: white;
+    padding: 10px;
+    z-index: 10;
+}
+
+/* 5. FLOAT Y CLEAR */
+.ejemplo-float { display: flow-root; }
+.flota-izquierda {
+    float: left;
+    width: 90px;
+    height: 70px;
+    margin: 5px;
+    background-color: lightblue;
+}
+.flota-derecha {
+    float: right;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    background-color: lightyellow;
+}
+.limpiar {
+    clear: both;
+    background-color: #eee;
+}
+
+/* 6. OVERFLOW */
+.desborde {
+    width: 200px;
+    height: 60px;
+    border: 2px solid gray;
+    line-height: 24px;
+}
+.visible {
+    overflow: visible;
+    /* Evita que el texto desbordado tape el siguiente titulo. */
+    margin-bottom: 80px;
+}
+.oculto { overflow: hidden; }
+.scroll { overflow: scroll; }
+.automatico { overflow: auto; }
+
+/* 7. VISIBILITY */
+.se-ve { visibility: visible; }
+.invisible { visibility: hidden; }
+.fila-colapsada { visibility: collapse; }
+table { border-collapse: collapse; }
+th, td {
+    border: 1px solid gray;
+    padding: 8px;
+}
+
+/* 8. Z-INDEX */
+.contenedor-capas {
+    position: relative;
+    height: 160px;
+}
+.capa-uno {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 90px;
+    background-color: lightblue;
+    z-index: 1;
+}
+.capa-dos {
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    width: 130px;
+    height: 90px;
+    background-color: orange;
+    z-index: 2;
+}
+
+/* 9. FLEXBOX: PROPIEDADES DEL CONTENEDOR */
+.flex {
+    display: flex;
+    gap: 10px;
+    background-color: #eee;
+    margin-bottom: 20px;
+}
+.flex > div {
+    padding: 10px;
+    background-color: lightblue;
+    min-width: 0;
+}
+.columna { flex-direction: column; }
+.varias-lineas {
+    flex-wrap: wrap;
+    width: 280px;
+}
+.varias-lineas > div { width: 100px; }
+.flujo {
+    flex-flow: row wrap;
+    width: 280px;
+}
+.flujo > div { width: 100px; }
+.distribuir { justify-content: space-between; }
+.alinear {
+    align-items: center;
+    height: 150px;
+}
+.alinear-lineas {
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 280px;
+    height: 220px;
+}
+.alinear-lineas > div { width: 100px; }
+
+/* 10. FLEXBOX: PROPIEDADES DE LOS ELEMENTOS */
+.primero { order: -1; }
+.crecimiento > div {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.crecimiento > .crece-doble { flex-grow: 2; }
+.reduccion {
+    width: 300px;
+    max-width: 100%;
+}
+.reduccion > div {
+    flex-basis: 200px;
+    flex-shrink: 1;
+}
+.reduccion > .reduce-doble { flex-shrink: 2; }
+.abreviatura > div { flex: 1 1 100px; }
+.alineacion-individual {
+    height: 150px;
+    align-items: flex-start;
+}
+.al-final { align-self: flex-end; }
+
+/* 11. DISENO RESPONSIVO */
+.tarjetas {
+    display: flex;
+    gap: 10px;
+}
+.tarjetas > div {
+    flex: 1;
+    padding: 20px;
+    background-color: lightgreen;
+}
+@media (max-width: 600px) {
+    .tarjetas { flex-direction: column; }
+}

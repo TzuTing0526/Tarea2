@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tarea 2: CSS3</h1>
+    <p>Diseño de Aplicaciones Web</p>
+    <p>Hecho por Tzu Ting Kao </p>
+
+    <h2>1. Modelo de caja</h2>
+    <p>La caja tiene contenido, padding, border y margin.</p>
+    <div class="caja">Este es el contenido de la caja.</div>
+    
+
+    <h2>2. Elementos de bloque y en línea</h2>
+       <div class="bloque">Bloque 1</div>
+    <div class="bloque">Bloque 2</div>
+
+    <h2>3. Display</h2>
+    <span class="convertido">Bloque.</span>
+    <div class="en-linea-bloque">Caja A</div>
+    <div class="en-linea-bloque">Caja B</div>
+
+    <h2>4. Position</h2>
+    <h3>Static y relative</h3>
+    <div class="estatico">Static: permanece en su lugar normal.</div>
+    <div class="relativo">Relative: se desplaza 20 px a la derecha.</div>
+    <h3>Absolute</h3>
+    <div class="contenedor-posicion">
+        Este contenedor tiene position: relative.
+        <div class="absoluto">Absolute: esquina inferior derecha.</div>
+    </div>
+  
+    <h2>5. Float y clear</h2>
+    <div class="ejemplo-float">
+        <div class="flota-izquierda">Izquierda A</div>
+        <div class="flota-izquierda">Izquierda B</div>
+        <div class="flota-derecha">Derecha</div>
+        <p>Este texto rodea las cajas flotantes si hay espacio.</p>
+       </div>
+
+    <h2>6. Overflow</h2>
+    <p>Las cuatro cajas tienen la misma altura, pero manejan de forma diferente el contenido que no cabe.</p>
+    <h3>Visible</h3>
+    <div class="desborde visible">Línea 1<br>Línea 2<br>Línea 3<br>Línea 4<br>Línea 5</div>
+    <h3>Hidden</h3>
+    <div class="desborde oculto">Línea 1<br>Línea 2<br>Línea 3<br>Línea 4<br>Línea 5</div>
+    <h3>Scroll</h3>
+    <div class="desborde scroll" tabindex="0" aria-label="Ejemplo de overflow scroll">Línea 1<br>Línea 2<br>Línea 3<br>Línea 4<br>Línea 5</div>
+    <h3>Auto</h3>
+    <div class="desborde automatico" tabindex="0" aria-label="Ejemplo de overflow auto">Línea 1<br>Línea 2<br>Línea 3<br>Línea 4<br>Línea 5</div>
+
+    <h2>7. Visibility</h2>
+    <p class="se-ve">Visible: este párrafo se muestra.</p>
+    <p class="invisible">Hidden: este párrafo no se ve, pero conserva su espacio.</p>
+
+
+    <h2>8. Z-index</h2>
+    <p>La caja naranja tiene z-index: 2 y se dibuja sobre la azul, que tiene z-index: 1.</p>
+    <div class="contenedor-capas">
+        <div class="capa-uno">Capa 1</div>
+        <div class="capa-dos">Capa 2</div>
+    </div>
+
+    <h2>9. Flexbox: contenedor</h2>
+    <h3>Flex-direction</h3>
+       <div class="flex columna">
+        <div>A</div><div>B</div><div>C</div>
+    </div>
+
+    <h3>Flex-wrap</h3>
+       <div class="flex varias-lineas">
+        <div>A</div><div>B</div><div>C</div><div>D</div>
+    </div>
+
+    <h3>Flex-flow</h3>
+       <div class="flex flujo">
+        <div>A</div><div>B</div><div>C</div><div>D</div>
+    </div>
+
+    <h3>Justify-content</h3>
+        <div class="flex distribuir">
+        <div>A</div><div>B</div><div>C</div>
+    </div>
+
+    <h3>Align-items</h3>
+        <div class="flex alinear">
+        <div>A</div><div>B<br>Dos líneas</div><div>C</div>
+    </div>
+
+    <h3>Align-content</h3>
+       <div class="flex alinear-lineas">
+        <div>A</div><div>B</div><div>C</div><div>D</div>
+    </div>
+
+    <h2>10. Flexbox: elementos</h2>
+    <h3>Order</h3>
+        <div class="flex">
+        <div>A</div><div class="primero">B</div><div>C</div>
+    </div>
+
+    <h3>Flex-grow</h3>
+        <div class="flex crecimiento">
+        <div>A</div><div class="crece-doble">B</div><div>C</div>
+    </div>
+
+    <h3>Flex-shrink y flex-basis</h3>
+        <div class="flex reduccion">
+        <div>A</div><div class="reduce-doble">B</div>
+    </div>
+
+    <h3>Flex</h3>
+       <div class="flex abreviatura">
+        <div>A</div><div>B</div><div>C</div>
+    </div>
+
+    <h3>Align-self</h3>
+       <div class="flex alineacion-individual">
+        <div>A</div><div class="al-final">B</div><div>C</div>
+    </div>
+
+    <h2>11. Flexbox responsivo</h2>
+        <div class="tarjetas">
+        <div>Tarjeta 1</div>
+        <div>Tarjeta 2</div>
+        <div>Tarjeta 3</div>
+    </div>
+</body>
+</html>
